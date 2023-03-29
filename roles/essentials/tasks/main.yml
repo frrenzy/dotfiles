@@ -1,0 +1,23 @@
+---
+- name: Install basic Debian packages
+  import_tasks: debian.yml
+  when: ansible_os_family == "Debian"
+
+- name: Install basic MacOSX packages
+  import_tasks: debian.yml
+  when: ansible_distribution == "MacOSX"
+
+- name: Install brew packages
+  loop:
+    - sqlite
+    - gh
+    - ripgrep
+    - fd
+    - lazygit
+    - thefuck
+    - htop
+    - fzf
+    - stow
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present

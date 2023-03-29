@@ -1,0 +1,23 @@
+---
+- name: Bootstrap development environment
+  hosts: localhost
+  tasks:
+    - name: Essentials
+      tags: essentials
+      import_role:
+        name: essentials
+
+    - name: Programming
+      tags: programming
+      import_role:
+        name: programming
+
+    - name: Nvim
+      tags: nvim
+      import_role:
+        name: nvim
+
+    - name: Stow
+      tags: stow
+      import_role:
+        name: stow

@@ -1,0 +1,7 @@
+[user]
+	name = Ivan Sizov
+	email = vsizov63@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = master
