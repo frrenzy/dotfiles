@@ -1,11 +1,10 @@
 return {
   {
-    dir = '/home/isizov/nvim_plugins/gruvbox.nvim',
+    'ellisonleao/gruvbox.nvim',
     opts = {
       transparent_mode = true,
       italic = {
         strings = false,
-        operators = true,
       },
     },
   },
