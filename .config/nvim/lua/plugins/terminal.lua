@@ -6,6 +6,14 @@ return {
     end,
     keys = {
       {
+        '<F7>',
+        function()
+          require('nvterm.terminal').send('cd ~/.config/nvim', 'float')
+        end,
+        mode = { 'n' },
+        desc = { 'Open terminal in config dir' },
+      },
+      {
         '<F8>',
         function()
           require('nvterm.terminal').toggle 'float'
