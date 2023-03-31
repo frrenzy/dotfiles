@@ -130,6 +130,7 @@ alias amend="git add . && git commit --amend"
 alias py="python3"
 alias rmdir="rm -r"
 alias log="git log --graph --oneline --decorate"
+alias st="git status"
 
 alias luamake=/home/ivan/lua-language-server/3rd/luamake/luamake
 eval $(thefuck --alias)
