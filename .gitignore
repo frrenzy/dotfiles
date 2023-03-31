@@ -5,8 +5,14 @@
 !.startup.sh
 !.p10k.zsh
 !.profile
-!.config/
 !.oh-my-zsh
+
+!.config/thefuck/
+!.config/nvim/
+!.config/kicad/
+!.config/kitty/
+!.config/gh/
+!.config/NvChad/
 
 !.gitconfig
 !**/.gitignore
