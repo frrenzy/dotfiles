@@ -7,16 +7,15 @@
 !.profile
 !.oh-my-zsh
 
-!.config/thefuck/
-!.config/nvim/
-!.config/kicad/
-!.config/kitty/
-!.config/gh/
-!.config/NvChad/
+.config/thefuck/
+.config/nvim/
+.config/kicad/
+.config/kitty/
+.config/gh/
+.config/NvChad/
 
 !.gitconfig
-!**/.gitignore
-!.config/.gitignore
+!.gitignore
 
 
 !ansible.cfg
