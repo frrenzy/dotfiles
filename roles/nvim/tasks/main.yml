@@ -1,8 +1,0 @@
----
-- name: Install nvim in Debian
-  import_tasks: debian.yml
-  when: ansible_os_family == "Debian"
-
-- name: Install nvim in macOS
-  import_tasks: macos.yml
-  when: ansible_distribution == "MacOSX"

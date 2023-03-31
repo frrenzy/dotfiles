@@ -16,4 +16,4 @@
 !bootstrap.yml
 !install
 !requirements.yml
-!roles
+!roles/
