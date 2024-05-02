@@ -1,0 +1,9 @@
+; (element
+;   (start_tag
+;     (tag_name) @_start_tag (#any-of? @_start_tag "component" "Component")
+;     (directive_attribute
+;       (directive_name) @_name (#eq? @_name ":")
+;       (directive_argument) @_bind (#eq? @_bind "is")
+;       (quoted_attribute_value
+;         (attribute_value) @_tag (#eq? @_tag "style"))))
+;   (text) @css (#offset! @css 1 0 -1 0))

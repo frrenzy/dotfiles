@@ -1,6 +1,6 @@
 return {
   {
-    'ellisonleao/gruvbox.nvim',
+    "ellisonleao/gruvbox.nvim",
     opts = {
       transparent_mode = true,
       italic = {
@@ -8,45 +8,49 @@ return {
       },
     },
   },
-  { 'LazyVim/LazyVim', opts = { colorscheme = 'gruvbox' } },
-  -- {
-  --   'folke/tokyonight.nvim',
-  --   opts = {
-  --     transparent = true,
-  --     style = 'storm',
-  --     styles = {
-  --       sidebars = 'transparent',
-  --       floats = 'transparent',
-  --     },
-  --   },
-  -- },
+  { "LazyVim/LazyVim", opts = { colorscheme = "gruvbox" } },
   {
-    'rcarriga/nvim-notify',
+    "folke/tokyonight.nvim",
     opts = {
-      background_colour = '#000000',
+      transparent = false,
+      style = "storm",
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
   },
-  { 'mbbill/undotree', keys = {
-    { '<F12>', '<cmd>UndotreeToggle<cr>', desc = 'UndoTree' },
-  } },
-  { 'nvim-treesitter/playground' },
-  { 'nvim-treesitter/nvim-treesitter-context' },
   {
-    'numToStr/Comment.nvim',
+    "rcarriga/nvim-notify",
+    opts = {
+      background_colour = "#000000",
+    },
+  },
+  { "mbbill/undotree", keys = {
+    { "<F12>", "<cmd>UndotreeToggle<cr>", desc = "UndoTree" },
+  } },
+  { "nvim-treesitter/playground" },
+  { "nvim-treesitter/nvim-treesitter-context" },
+  {
+    "numToStr/Comment.nvim",
     keys = {
       {
-        '<leader>tc',
+        "<leader>tc",
         function()
-          require('Comment.api').toggle.linewise.current()
+          require("Comment.api").toggle.linewise.current()
         end,
-        desc = 'toggle comment',
+        desc = "toggle comment",
       },
       {
-        '<leader>tc',
+        "<leader>tc",
         '<ESC><cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
-        mode = 'v',
-        desc = 'toggle comment',
+        mode = "v",
+        desc = "toggle comment",
       },
     },
+  },
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
   },
 }

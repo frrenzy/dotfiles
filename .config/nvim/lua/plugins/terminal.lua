@@ -11,7 +11,7 @@ return {
           require('nvterm.terminal').send('cd ~/.config/nvim', 'float')
         end,
         mode = { 'n' },
-        desc = { 'Open terminal in config dir' },
+        desc = 'Open terminal in config dir',
       },
       {
         '<F8>',

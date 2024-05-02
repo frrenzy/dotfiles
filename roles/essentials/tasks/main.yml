@@ -4,7 +4,7 @@
   when: ansible_os_family == "Debian"
 
 - name: Install basic MacOSX packages
-  import_tasks: debian.yml
+  import_tasks: mac.yml
   when: ansible_distribution == "MacOSX"
 
 - name: Install brew packages

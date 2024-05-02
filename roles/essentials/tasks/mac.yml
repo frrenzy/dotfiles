@@ -1,12 +1,4 @@
 ---
-- name: Install OSX command line tools
-  include_role:
-    name: elliotweiser.osx-command-line-tools
-
-- name: Install homebrew
-  include_role:
-    name: geerlingguy.mac.homebrew
-
 - name: Install essentials
   become: true
   loop:

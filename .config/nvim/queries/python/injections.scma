@@ -1,0 +1,9 @@
+(call
+  function: [
+    (identifier) @_name
+    (attribute
+      attribute: (identifier) @_name)
+  ] (#eq? @_name "execute")
+  arguments: (argument_list
+    (string
+      string_content: (string_content) @sql)))
