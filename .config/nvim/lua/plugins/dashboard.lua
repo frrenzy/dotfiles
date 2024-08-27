@@ -3,6 +3,7 @@ return {
   event = "VimEnter",
   opts = function()
     local utils = require "utils.string"
+    local cli = require "utils.cli"
     local logo = [[
          ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
          ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
@@ -13,12 +14,14 @@ return {
     ]]
 
     local current_dir_tokens = utils.split(vim.loop.cwd(), "/")
-    local cwd = current_dir_tokens[#current_dir_tokens]
+    local repo = current_dir_tokens[#current_dir_tokens - 1]
+    local worktree = current_dir_tokens[#current_dir_tokens]
+    local branch = utils.split(cli.get_response [[git branch | rg "\*"]], " ")[2]
     local project = ""
-    if cwd == "nvim" then
+    if worktree == "nvim" then
       project = "NVIM config"
     else
-      project = cwd
+      project = repo .. " / " .. worktree .. " @ " .. branch
     end
 
     logo = string.rep("\n", 8) .. logo .. "\n\n" .. "Current project: " .. project .. "\n\n"
